@@ -8,7 +8,7 @@ echo "Deployment started ..."
 (php artisan down) || true
 
 # Pull the latest version of the app
-#sudo git config --global --add safe.directory /var/www//makogai.xyz
+sudo git config --global --add safe.directory /var/www/websites/ikuzounscripted.me
 
 sudo git pull origin main
 

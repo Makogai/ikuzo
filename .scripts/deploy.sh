@@ -10,7 +10,7 @@ echo "Deployment started ..."
 # Pull the latest version of the app
 sudo git config --global --add safe.directory /var/www/websites/ikuzounscripted.me
 
-sudo git pull origin main
+sudo git pull origin master
 
 # Install composer dependencies
 sudo composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader

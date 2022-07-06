@@ -30,7 +30,7 @@ class WebsiteController extends Controller
             $items[] = $newItem;
         }
         $data = [
-            'items' => array_slice($items, 0, 3),
+            'items' => array_slice($items, 0, 9),
             'posts' => Post::query()->take(2)->with(['author', 'category'])->get()
         ];
         return view('welcome', $data);

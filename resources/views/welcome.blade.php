@@ -17,7 +17,7 @@
 
                         <div class="row">
                             @foreach($items as $item)
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-3">
                                     <div class="show">
                                         <div class="show_image">
                                             <a href="{{$item['link']}}">
@@ -66,24 +66,35 @@
                     </div>
                     <div class="col-2">
                         <div class="row">
+                            <div class="col-12">
+                                <a href="https://www.listennotes.com/podcasts/ikuzos-unscripted-podcast-petar-dzakovic-qkyaYD9ponh/" title="Ikuzo’s Unscripted Podcast | Listen Notes"><img loading="lazy" src="https://cdn-images-2.listennotes.com/images/podcasts/qkyaYD9ponh/badge/" alt="Ikuzo’s Unscripted Podcast | Listen Notes" style="height: auto; max-width: 100%; width: 100%;" /></a>
+                            </div>
                             <div class="col-12 mt-3 listenOn">
-                                <a href="" class="px-2 py-2 rounded gap-2">
+                                <a href="https://open.spotify.com/show/3FLnOT2GnvWBh2aqJq0sR0" class="px-2 py-2 rounded gap-2" style="background-color: #1ed760;">
                                     <img src="images/spotify.png" alt="">
                                     <p class="text-white font-weight-bold ml-3">Listen on Spotify</p>
                                 </a>
                             </div>
                             <div class="col-12 mt-3 listenOn">
-                                <a href="" class="px-2 py-2 rounded gap-2">
-                                    <img src="images/apple.png" alt="">
-                                    <p class="text-white font-weight-bold ml-3">Listen on Apple</p>
-                                </a>
-                            </div>
-                            <div class="col-12 mt-3 listenOn">
-                                <a href="" class="px-2 py-2 rounded gap-2">
+                                <a href="" class="px-2 py-2 rounded gap-2"  style="background:linear-gradient(-90deg, #4285f4, #fbbc05, #ea4335);">
                                     <img src="images/googlepodcast.png" alt="">
                                     <p class="text-white font-weight-bold ml-3">Listen on Google</p>
                                 </a>
                             </div>
+                            <div class="col-12 mt-3">
+                                <a href="https://podcasts.apple.com/us/podcast/ikuzos-unscripted-podcast/id1586974342?itsct=podcast_box_badge&amp;itscg=30200&amp;ls=1" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 100%;"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-podcasts/badge/en-us?size=250x83&amp;releaseDate=1649430000&h=f256461c7d011217ebace5df0d3768e2" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 100%;"></a>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <iframe src="https://embed.podcasts.apple.com/us/podcast/ikuzos-unscripted-podcast/id1586974342?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background-color: transparent;"></iframe>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <img src="https://tools-qr-production.s3.amazonaws.com/output/apple-toolbox/582b75fd0ff67e9ff0c1ef4b8532bcef/94a6a8c8aa53160ef71831001d9c0553.png">
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <iframe title="deezer-widget" src="https://widget.deezer.com/widget/auto/show/3450172" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+                            </div>
+
                         </div>
                     </div>
 

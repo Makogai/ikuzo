@@ -182,7 +182,7 @@
 
     <!-- Shows -->
 
-    <div class="shows">
+    <div class="shows pb-0">
         <div class="container-fluid">
         {{ $fluid ?? '' }}
         <!-- <div class="row">
@@ -193,7 +193,7 @@
         </div>
     </div>
 
-    <div class="shows">
+    <div class="">
         <div class="container">
         {{ $slot }}
         <!-- <div class="row">

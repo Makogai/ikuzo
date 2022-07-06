@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
+use Vedmant\FeedReader\FeedReader;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,15 @@ use App\Http\Controllers\WebsiteController;
 |
 */
 
-Route::get('/', [WebsiteController::class, 'index']);
+Route::get('/', [WebsiteController::class, 'index'])->middleware('active');
+Route::get('/inactive',function (){
+    if (app(\App\Settings\GeneralSettings::class)->site_active)
+        return redirect('/');
+    return view('inactive');
+});
 
 Route::get('/dashboard', function () {
+
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 

@@ -6,12 +6,25 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "cucxabeng/simple-html-dom": "dev-master",
+        "doctrine/dbal": "^3.3",
+        "filament/filament": "^2.0",
+        "filament/spatie-laravel-settings-plugin": "^2.0",
+        "filament/spatie-laravel-media-library-plugin": "^2.10",
+        "filament/spatie-laravel-tags-plugin": "^2.10",
+        "filament/spatie-laravel-translatable-plugin": "^2.10",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.10",
         "roach-php/core": "^1.0",
-        "roach-php/laravel": "^1.0"
+        "roach-php/laravel": "^1.0",
+        "shuvroroy/filament-spatie-laravel-health": "^1.4",
+        "simplehtmldom/simplehtmldom": "^2.0@RC",
+        "spatie/laravel-health": "^1.11",
+        "sunra/php-simple-html-dom-parser": "^1.5",
+        "vedmant/laravel-feed-reader": "^1.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

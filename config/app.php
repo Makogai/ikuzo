@@ -181,6 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+//        cucxabeng\HtmlDom\HtmlDomServiceProvider::class,
 
         /*
          * Package Service Providers...

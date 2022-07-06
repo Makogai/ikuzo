@@ -7,6 +7,7 @@ use App\Models\Shop\Category as ShopCategory;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
@@ -23,9 +24,10 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('public');
 
         // Admin
-        User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@ikuzounscripted.me',
+        User::query()->create([
+            'name' => "admin",
+            'email' => "admin@ikuzounscripted.me",
+            'password' => Hash::make('password')
         ]);
         $this->command->info('Admin user created.');
 

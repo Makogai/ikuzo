@@ -137,12 +137,15 @@
                 </div>
             </div>
             <div class="row newsletter_row">
+                @if($errors->any())
+                    <h4>{{$errors->first()}}</h4>
+                @endif
                 <div class="col-lg-10 offset-lg-1">
                     <div class="newsletter_form_container">
-                        <form action="#"
+                        <form action="/newsletter-subscribe" method="get"
                               class="newsletter_form d-flex flex-md-row flex-column align-items-md-start align-items-center justify-content-md-between justify-content-start"
                               id="newsletter_form">
-                            <input type="email" class="newsletter_input" required="required">
+                            <input type="email" class="newsletter_input" name="email" required="required">
                             <button class="newsletter_button button_fill">subscribe now!</button>
                         </form>
                     </div>

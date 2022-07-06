@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Support\Carbon;
 use Spatie\Tags\HasTags;
 
 class Post extends Model
@@ -28,9 +29,16 @@ class Post extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'published_at' => 'date',
+        'published_at' => 'datetime:Y-m-d',
     ];
-
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    public function getPublishedAtAttribute()
+    {
+        return Carbon::parse($this->attributes['published_at'])->format('d M Y');
+    }
     public function author(): BelongsTo
     {
         return $this->belongsTo(Author::class, 'blog_author_id');
@@ -45,4 +53,6 @@ class Post extends Model
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
+
 }

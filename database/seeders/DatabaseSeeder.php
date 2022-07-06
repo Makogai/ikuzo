@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         // Clear images
-        Storage::deleteDirectory('public');
+//        Storage::deleteDirectory('public');
 
         // Admin
         User::query()->create([

@@ -40,10 +40,9 @@ class PostResource extends Resource
                             ->reactive()
                             ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                         Forms\Components\TextInput::make('slug')
-                            ->disabled()
                             ->required()
                             ->unique(Post::class, 'slug', fn ($record) => $record),
-                        Forms\Components\MarkdownEditor::make('content')
+                        Forms\Components\RichEditor::make('content')
                             ->required()
                             ->columnSpan([
                                 'sm' => 2,

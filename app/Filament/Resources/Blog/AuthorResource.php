@@ -36,7 +36,7 @@ class AuthorResource extends Resource
                             ->required()
                             ->email()
                             ->unique(Author::class, 'email', fn ($record) => $record),
-                        Forms\Components\MarkdownEditor::make('bio')
+                        Forms\Components\RichEditor::make('bio')
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
@@ -48,6 +48,9 @@ class AuthorResource extends Resource
                             Forms\Components\FileUpload::make('photo')
                                 ->label('Image')
                                 ->image(),
+                        Forms\Components\Toggle::make('is_core')
+                            ->label('Is creator (for about page).')
+                            ->default(true),
                     ])
                     ->columns([
                         'sm' => 2,

@@ -15,6 +15,9 @@ class GeneralSettings extends Settings
     public string $apple;
     public string $spotify;
     public string $copyright;
+    public string $video_episodes;
+    public string $total_guests;
+    public string $about_podcast;
 
     public bool $site_active;
 

@@ -14,5 +14,8 @@ class CreateGeneralSettings extends SettingsMigration
         $this->migrator->add('general.spotify', 'ikuzounscripted');
         $this->migrator->add('general.apple', 'ikuzounscripted');
         $this->migrator->add('general.copyright', 'ikuzounscripted');
+        $this->migrator->add('general.about_podcast', 'ikuzounscripted');
+        $this->migrator->add('general.total_guests', '0');
+        $this->migrator->add('general.video_episodes', '0');
     }
 }

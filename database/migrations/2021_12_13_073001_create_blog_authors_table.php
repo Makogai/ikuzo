@@ -20,6 +20,8 @@ return new class () extends Migration {
             $table->longText('bio')->nullable();
             $table->string('instagram_handle')->nullable();
             $table->string('linkedin_handle')->nullable();
+            $table->boolean('is_core')->default(false);
+
             $table->timestamps();
         });
     }

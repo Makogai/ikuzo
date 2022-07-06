@@ -25,6 +25,7 @@ class Author extends Model
         'bio',
         'instagram_handle',
         'linkedin_handle',
+        'is_core',
     ];
 
     public function posts(): HasMany

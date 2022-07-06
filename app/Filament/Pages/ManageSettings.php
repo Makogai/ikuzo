@@ -22,6 +22,12 @@ class ManageSettings extends SettingsPage
             TextInput::make('site_name')
                 ->label('Website name')
                 ->required(),
+            TextInput::make('video_episodes')
+                ->label('Video Episodes')
+                ->required(),
+            TextInput::make('total_guests')
+                ->label('Total Guests')
+                ->required(),
             TextInput::make('instagram')
                 ->label('Instagram url')
                 ->required(),
@@ -43,6 +49,15 @@ class ManageSettings extends SettingsPage
                     'link',
                     'bold',
                     'italic'
+                ])
+                ->required(),
+            RichEditor::make('about_podcast')
+                ->label('About podcast')
+                ->toolbarButtons([
+                    'link',
+                    'bold',
+                    'italic',
+                    'image'
                 ])
                 ->required(),
             Toggle::make('site_active')->label('Active')->default(true)->inline(),

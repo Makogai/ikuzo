@@ -16,6 +16,7 @@ use Vedmant\FeedReader\FeedReader;
 */
 
 Route::get('/', [WebsiteController::class, 'index'])->middleware('active');
+Route::get('/about', [WebsiteController::class, 'about'])->middleware('active');
 Route::get('/inactive',function (){
     if (app(\App\Settings\GeneralSettings::class)->site_active)
         return redirect('/');

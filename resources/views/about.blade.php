@@ -6,6 +6,10 @@
             .intro_text {
                 color: #2e3038 !important;
             }
+            .about_text > *{
+                color: white!important;
+            }
+
         </style>
     </slot:styles>
 

@@ -3,7 +3,7 @@
         <div class="row footer_logo_row">
             <div class="col d-flex flex-row align-items-center justify-content-center">
                 <div class="logo">
-                    <a href="#"><span>ikuzo</span>unscripted</a>
+                    <img src="{{asset('images/logo.png')}}" style="height: 70px; margin-top: -10px;" alt="">
                 </div>
             </div>
         </div>
@@ -111,10 +111,9 @@
             <div class="col">
                 <div class="footer_social">
                     <ul class="d-flex flex-row align-items-center justify-content-center">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li><a href="{{ $instagram  }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="{{ $youtube  }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li><a href="{{ $spotify  }}"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>

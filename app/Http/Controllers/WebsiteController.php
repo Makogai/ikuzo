@@ -60,4 +60,9 @@ class WebsiteController extends Controller
         ];
         return view('about', $data);
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

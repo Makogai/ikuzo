@@ -89,21 +89,21 @@
 
     <!-- About -->
 
-    <div class="about mb-5">
+    <div class="about my-5 ikuzobg">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <div class="section_title text-center"><h1>About the creators</h1></div>
+                            <div class="section_title text-center text-white"><h1 class="text-white"> About the creators</h1></div>
                         </div>
                     </div>
                     @foreach($creators as $item)
                         <div
                             class="about_container d-flex flex-lg-row flex-column align-items-center justify-content-start mt-4">
                             <div class="about_content">
-                                <div class="section_title font-xl"><h3 style="color: #2e3038!important;">{{$item->name}}</h3></div>
-                                <div class="about_text px-4">
+                                <div class="section_title font-xl"><h3 style="" class="text-white">{{$item->name}}</h3></div>
+                                <div class="about_text px-4 text-white">
                                     {!! $item->bio !!}
                                 </div>
                                 <div class="social">

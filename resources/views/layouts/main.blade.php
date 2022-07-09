@@ -12,6 +12,20 @@
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     {{ $additionalStyles ?? ''  }}
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+    <style>
+        @font-face {
+            font-family: ikuzo;
+            src: url("css/Lovelo-Black.otf") format("opentype");
+        }
+
+        header li a {
+            font-family: ikuzo;
+        }
+        h1,h2, .title {
+            font-family: ikuzo;
+        }
+    </style>
 {{--    <script src="js/test.js"></script>--}}
 {{--    <script>--}}
 
@@ -68,10 +82,10 @@
 
         <!-- Logo -->
         <div class="logo">
-            <a href="#"><span>Ikuzo</span>unscripted</a>
+            <img src="{{asset('images/logo.png')}}" style="height: 70px; margin-top: -10px;" alt="">
         </div>
 
-        <div class="container">
+        <div class="container mt-3">
             <div class="row">
                 <div class="col">
                     <div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
@@ -80,7 +94,7 @@
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/episodes">Episodes</a></li>
-                                <li><a href="/blog">Blog</a></li>
+{{--                                <li><a href="/blog">Blog</a></li>--}}
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -98,10 +112,9 @@
             <!-- Social -->
             <div class="social">
                 <ul class="d-flex flex-row align-items-start justify-content-start">
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
+                    <li><a href="{{ $instagram  }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="{{ $youtube  }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="{{ $spotify  }}"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
 
@@ -119,13 +132,13 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/episodes">Episodes</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
+{{--                <li><a href="/blog">Blog</a></li>--}}
+                <li><a href="/contact">Contact</a></l
+                    i>
             </ul>
             <div class="menu_extra d-flex flex-column align-items-end justify-content-start">
                 <div class="social">
                     <ul class="d-flex flex-row align-items-start justify-content-start">
-                        <li><a href="{{ $facebook  }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="{{ $instagram  }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="{{ $youtube  }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                         <li><a href="{{ $spotify  }}"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>

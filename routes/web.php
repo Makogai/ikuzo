@@ -20,6 +20,8 @@ Route::get('/about', [WebsiteController::class, 'about'])->middleware('active');
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->middleware('active');
 Route::get('/post/{post}', [\App\Http\Controllers\BlogController::class, 'show'])->middleware('active')->name('post.show');
 
+Route::get('/episodes', [\App\Http\Controllers\EpisodesController::class, 'index'])->middleware('active');
+Route::get('/contact', [\App\Http\Controllers\WebsiteController::class, 'contact'])->middleware('active');
 
 Route::get('/newsletter-subscribe', [\App\Http\Controllers\NewsletterController::class, 'store'])->middleware('active')->name('newsletter.subscribe');
 Route::get('/newsletter-unsubscribe', [\App\Http\Controllers\NewsletterController::class, 'unsubscribe'])->middleware('active')->name('newsletter.unsubscribe');

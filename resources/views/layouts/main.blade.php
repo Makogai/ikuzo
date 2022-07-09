@@ -153,7 +153,7 @@
 
     <div class="home">
         <div class="background_image"
-             style="background-image:url({{$lastPodcast['image']}}); filter: blur(7px); transform: scale(1.1); box-shadow:inset 0 0 0 2000px rgba(0, 0, 255, 0.3);"></div>
+             style="background-image:url({{$lastPodcast['image']}}); filter: blur(7px); transform: scale(1.1); box-shadow:inset 0 0 0 2000px rgba(24, 46, 75, 0.5);"></div>
         <div class="home_container">
             <div class="container">
                 <div class="row">
@@ -174,7 +174,7 @@
                                     <li><a href="#">{{ $lastPodcast['date'] }}</a></li>
                                     <li><a href="#">{{ $lastPodcast['type'] }}</a></li>
                                     <li>{{$lastPodcast['duration']}}</li>
-                                    <li><a href="#">0 Comments</a></li>
+{{--                                    <li><a href="#">0 Comments</a></li>--}}
                                 </ul>
                             </div>
                             <div class="track track_home">

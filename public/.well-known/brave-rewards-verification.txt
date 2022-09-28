@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ikuzounscripted.me
+Token: d8ba892cdf2e095d18acf615cec6726f65dabd78a1a337ae5daef537c6bd52ea

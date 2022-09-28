@@ -28,6 +28,9 @@ class EpisodesController extends Controller
             $newItem['type'] = $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'episodeType')[0]['data'];
             $newItem['season'] = $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'season') ? $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'season')[0]['data'] : '0';
             $seconds = $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'duration')[0]['data'];
+sscanf($seconds, "%d:%d:%d", $hhours, $mminutes, $sseconds);
+
+$seconds = isset($sseconds) ? $hhours * 3600 + $mminutes * 60 + $sseconds : $hhours * 60 + $mminutes;
             $newItem['duration'] = sprintf('%02d:%02d', ($seconds/ 60 % 60), $seconds% 60);;
             $newItem['episode'] = $newItem['type'] == 'full' ?  $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'episode')[0]['data'] : 'BONUS';
 

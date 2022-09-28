@@ -34,8 +34,12 @@ class Footer extends Component
         $lastPodcast['type'] = $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'episodeType')[0]['data'];
         $lastPodcast['season'] = $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'season') ? $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'season')[0]['data'] : '0';
         $seconds = $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'duration')[0]['data'];
-        $lastPodcast['duration'] = sprintf('%02d:%02d', ($seconds/ 60 % 60), $seconds% 60);;
-        $lastPodcast['episode'] = $lastPodcast['type'] == 'full' ?  $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'episode')[0]['data'] : 'BONUS';
+        if(!is_string($seconds)){           
+                $lastPodcast['duration'] = sprintf('%02d:%02d', ($seconds/ 60 % 60), $seconds% 60);}
+                else{
+                $lastPodcast['duration'] = $seconds;}
+       
+ $lastPodcast['episode'] = $lastPodcast['type'] == 'full' ?  $item->get_item_tags(SIMPLEPIE_NAMESPACE_ITUNES, 'episode')[0]['data'] : 'BONUS';
         $this->lastPodcast = $lastPodcast;
 
         $this->websiteName = app(GeneralSettings::class)->site_name;
